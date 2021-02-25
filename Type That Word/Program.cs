@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Type_That_Word
 {
@@ -18,6 +19,7 @@ namespace Type_That_Word
             //Variable for index to use in for loop
             var w = new Random();
 
+
             //For loop to generate three random words
             for (int i = 0; i < 3; i++)
             {
@@ -27,9 +29,8 @@ namespace Type_That_Word
 
             Console.WriteLine(string.Join(" ", words));
 
-
-
-
+            //UserInput for typing game
+            string userInputWords = Console.ReadLine();
         }
     }
 }
