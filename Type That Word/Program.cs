@@ -9,7 +9,7 @@ namespace Type_That_Word
         {
 
 
-           //Variable for Random index
+            //Variable for Random index
             int myRandomIndex = 0;
             //Initialize the wordlist with the words to choose from
             var wordList = new List<string>(new[] { "apple", "bird", "cat", "dog", "elephant", "fish", "goat" });
@@ -27,13 +27,11 @@ namespace Type_That_Word
 
             Console.WriteLine(string.Join(" ", words));
 
-            do
-            {
-                cki = Console.ReadKey();
-                Console.Write(" --- You pressed ");
-            }
 
 
+
+        }
     }
-
 }
+
+
