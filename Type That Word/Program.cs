@@ -21,7 +21,8 @@ namespace Type_That_Word
 
             foreach (string s in WordList)
             {
-                Console.WriteLine(s);
+                Console.Write(s + " ");
+                
             }
         }
 
