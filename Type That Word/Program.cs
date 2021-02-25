@@ -7,24 +7,25 @@ namespace Type_That_Word
     {
         static void Main(string[] args)
         {
-            //strings for the list
-            string firstWord = "Quick";
-            string secondWord = "Lazy";
-            string thirdWord = "Brown";
+
 
             // Initialize the Words List
-            List<string> WordList = new List<string>();
+            int myRandomIndex = 0;
+            var wordList = new List<string>(new[] { "apple", "bird", "cat", "dog", "elephant", "fish", "goat"});
+            var words = new List<string>();
+            var w = new Random();
 
-            WordList.Add(firstWord);
-            WordList.Add(secondWord);
-            WordList.Add(thirdWord);
-
-            foreach (string s in WordList)
+            for (int i = 0; i<3; i++)
             {
-                Console.Write(s + " ");
-                
+                myRandomIndex = w.Next(wordList.Count);
+                words.Add(wordList[myRandomIndex]);
+               
             }
+
+            Console.WriteLine(string.Join(" ", words));
+            
         }
+
 
     }
 
