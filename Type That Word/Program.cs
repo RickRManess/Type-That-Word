@@ -9,12 +9,11 @@ namespace Type_That_Word
         static void Main(string[] args)
         {
 
-            ConsoleKeyInfo cki;
-
             //Variable for Random index
             int myRandomIndex = 0;
             //Initialize the wordlist with the words to choose from
-            var wordList = new List<string>(new[] { "apple", "bird", "cat", "dog", "elephant", "fish", "goat" });
+            var wordList = new List<string> { "apple", "bird", "cat", "dog", "elephant", "fish", "goat" };
+
             //intialize wordlist to contain the three randomly chosen words
             var words = new List<string>();
             //Variable for index to use in for loop
@@ -28,23 +27,25 @@ namespace Type_That_Word
             }
 
             //Converting random word list to string and displaying it
-            string newString = string.Join(" ", words);
-            Console.WriteLine(newString);
+            string stringToType = string.Join(" ", words);
+            Console.WriteLine(stringToType);
 
-            //user input converted to string to check against generated words
-            string userInputWords = Console.ReadLine();
-            int length = newString.Length - 1;
+            // for loop to move the comparison check through all characters of randomly generated words
+            for (int i = 0; i < stringToType.Length;)
+            {
+                //user input converted to string to check against generated words
+                ConsoleKeyInfo userInputGame;
+                userInputGame = Console.ReadKey(true);
 
             // if statement to compare characters from generated words and user input
-            for (int i = 0; i < length; i++)
-            {
-                if (userInputWords[i] == newString[i])
+                if (userInputGame.KeyChar == stringToType[i])
                 {
-                    Console.WriteLine("Yes");
+                    Console.Write(userInputGame.KeyChar);
+                    i++;
                 }
                 else
                 {
-                    Console.WriteLine("No");
+                    Console.Beep();
                 }
             }
 
