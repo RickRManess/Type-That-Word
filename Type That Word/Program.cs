@@ -27,10 +27,20 @@ namespace Type_That_Word
                 words.Add(wordList[myRandomIndex]);
             }
 
-            Console.WriteLine(string.Join(" ", words));
+            //Converting random word list to string
+            string newString = string.Join(" ", words);
+            Console.WriteLine(newString);
 
             //UserInput for typing game
             string userInputWords = Console.ReadLine();
+
+            int length = newString.Length;
+
+            for (int i = 0; i>length; i++)
+            {
+
+            }
+
         }
     }
 }
