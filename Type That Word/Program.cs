@@ -33,14 +33,20 @@ namespace Type_That_Word
 
             //user input converted to string to check against generated words
             string userInputWords = Console.ReadLine();
+            int length = newString.Length - 1;
 
             // if statement to compare characters from generated words and user input
-            if (userInputWords[0] == newString[0])
+            for (int i = 0; i < length; i++)
             {
-                Console.WriteLine("Yes");
+                if (userInputWords[i] == newString[i])
+                {
+                    Console.WriteLine("Yes");
+                }
+                else
+                {
+                    Console.WriteLine("No");
+                }
             }
-
-
 
 
         }
