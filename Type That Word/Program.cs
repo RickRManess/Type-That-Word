@@ -9,6 +9,7 @@ namespace Type_That_Word
         static void Main(string[] args)
         {
 
+            ConsoleKeyInfo cki;
 
             //Variable for Random index
             int myRandomIndex = 0;
@@ -19,7 +20,6 @@ namespace Type_That_Word
             //Variable for index to use in for loop
             var w = new Random();
 
-
             //For loop to generate three random words
             for (int i = 0; i < 3; i++)
             {
@@ -27,21 +27,24 @@ namespace Type_That_Word
                 words.Add(wordList[myRandomIndex]);
             }
 
-            //Converting random word list to string
+            //Converting random word list to string and displaying it
             string newString = string.Join(" ", words);
             Console.WriteLine(newString);
 
-            //UserInput for typing game
+            //user input converted to string to check against generated words
             string userInputWords = Console.ReadLine();
 
-            int length = newString.Length;
-
-            for (int i = 0; i>length; i++)
+            // if statement to compare characters from generated words and user input
+            if (userInputWords[0] == newString[0])
             {
-
+                Console.WriteLine("Yes");
             }
 
+
+
+
         }
+
     }
 }
 
