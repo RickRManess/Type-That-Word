@@ -11,7 +11,24 @@ namespace Type_That_Word
             //Introduction Text
             Console.WriteLine("Type the words as quick as you can");
             Console.WriteLine("Try to avoid the BEEEEP");
-            Console.WriteLine();
+            Console.WriteLine("Press 1 for easy 2 for medium 3 for hard");
+
+            //switch case for difficulty
+            int difficulty = Int32.Parse(Console.ReadLine());
+            int listLength = 0;
+
+            switch (difficulty)
+            {
+                case 1:
+                    listLength = 3;
+                    break;
+                case 2:
+                    listLength = 5;
+                    break;
+                case 3:
+                    listLength = 7;
+                    break;
+            }
 
             //Variable for Random index
             int myRandomIndex = 0;
@@ -24,7 +41,7 @@ namespace Type_That_Word
             var w = new Random();
 
             //For loop to generate three random words
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < listLength; i++)
             {
                 myRandomIndex = w.Next(wordList.Count);
                 words.Add(wordList[myRandomIndex]);
@@ -41,7 +58,7 @@ namespace Type_That_Word
                 ConsoleKeyInfo userInputGame;
                 userInputGame = Console.ReadKey(true);
 
-            // if statement to compare characters from generated words and user input
+                // if statement to compare characters from generated words and user input
                 if (userInputGame.KeyChar == stringToType[i])
                 {
                     Console.Write(userInputGame.KeyChar);
