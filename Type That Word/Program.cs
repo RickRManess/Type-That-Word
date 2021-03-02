@@ -8,6 +8,10 @@ namespace Type_That_Word
     {
         static void Main(string[] args)
         {
+            //Introduction Text
+            Console.WriteLine("Type the words as quick as you can");
+            Console.WriteLine("Try to avoid the BEEEEP");
+            Console.WriteLine();
 
             //Variable for Random index
             int myRandomIndex = 0;
@@ -48,10 +52,7 @@ namespace Type_That_Word
                     Console.Beep();
                 }
             }
-
-
         }
-
     }
 }
 
