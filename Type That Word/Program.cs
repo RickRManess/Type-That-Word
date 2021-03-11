@@ -9,10 +9,8 @@ namespace Type_That_Word
     {
         static void Main(string[] args)
         {
-            //Introduction Text
-            Console.WriteLine("Type the words as quick as you can!!");
-            Console.WriteLine("Try to avoid the BEEEEP");
-            Console.WriteLine("Press: 1= easy game 2= medium game 3= hard game");
+
+            DisplayIntroText();
 
             //switch case for difficulty
             int difficulty = Int32.Parse(Console.ReadLine());
@@ -48,7 +46,6 @@ namespace Type_That_Word
                     var sentenceToType = new Word();
                     Int32.TryParse(part[0], out sentenceToType.lineNumber);
                     char[] charsToTrim = { ' ' };
-                    
                     sentenceToType.sentence = part[1].Trim(charsToTrim);
                     WordList.Add(sentenceToType);
 
@@ -93,6 +90,14 @@ namespace Type_That_Word
                 }
             }
         }
+        static void DisplayIntroText()
+        {
+            //Introduction Text
+            Console.WriteLine("Type the words as quick as you can!!");
+            Console.WriteLine("Try to avoid the BEEEEP");
+            Console.WriteLine("Press: 1= easy game 2= medium game 3= hard game");
+        }
+
     }
 }
 
