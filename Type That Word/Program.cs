@@ -29,6 +29,9 @@ namespace Type_That_Word
                 case 3:
                     listLength = 5;
                     break;
+                case 4:
+                    listLength = 20;
+                    break;
             }
 
             //Initializing var for the file with words
