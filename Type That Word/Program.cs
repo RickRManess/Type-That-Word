@@ -48,7 +48,6 @@ namespace Type_That_Word
                     char[] charsToTrim = { ' ' };
                     sentenceToType.sentence = part[1].Trim(charsToTrim);
                     WordList.Add(sentenceToType);
-
                 }
                 catch (Exception e)
                 {
@@ -90,9 +89,12 @@ namespace Type_That_Word
                 }
             }
         }
+        /// <summary>
+        /// Produces text to prompt user for input
+        /// </summary>
         static void DisplayIntroText()
         {
-            //Introduction Text
+            
             Console.WriteLine("Type the words as quick as you can!!");
             Console.WriteLine("Try to avoid the BEEEEP");
             Console.WriteLine("Press: 1= easy game 2= medium game 3= hard game");
